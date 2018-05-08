@@ -12,3 +12,8 @@
 
 # Project-local glide cache, RE: https://github.com/Masterminds/glide/issues/736
 .glide/
+
+# Locally vendored dependencies
+# These can be excluded from the repo as they can be reconstructed
+# from Gopkg.lock
+vendor/

@@ -3,8 +3,8 @@ package backing
 import (
 	"encoding/binary"
 
-	"github.com/oneiro-ndev/noms/go/datas"
-	nt "github.com/oneiro-ndev/noms/go/types"
+	"github.com/attic-labs/noms/go/datas"
+	nt "github.com/attic-labs/noms/go/types"
 )
 
 // Int is an integer which can serialize itself to a noms blob.

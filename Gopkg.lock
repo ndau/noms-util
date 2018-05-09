@@ -16,26 +16,24 @@
     "go/chunks",
     "go/constants",
     "go/d",
+    "go/datas",
     "go/hash",
     "go/merge",
+    "go/metrics",
     "go/nbs",
     "go/ngql",
+    "go/nomdl",
+    "go/sloppy",
     "go/types",
     "go/util/exit",
     "go/util/functions",
+    "go/util/random",
     "go/util/sizecache",
-    "go/util/status",
     "go/util/verbose",
     "go/util/writers"
   ]
-  revision = "22f70f585d00bb0c6c62e11580f8260e711d4cce"
-  version = "v7.4"
-
-[[projects]]
-  name = "github.com/attic-labs/testify"
-  packages = ["assert"]
-  revision = "f390dcf405f7b83c997eac1b06768bb9f44dec18"
-  version = "v1.1.3"
+  revision = "186e0939a5044b182bce9e60dea910bd6bcb5cd9"
+  source = "https://github.com/oneiro-ndev/noms.git"
 
 [[projects]]
   name = "github.com/aws/aws-sdk-go"
@@ -145,15 +143,6 @@
   revision = "9bdec3dec7c611fa97beadc374d75bdf02cd880e"
 
 [[projects]]
-  name = "github.com/oneiro-ndev/noms"
-  packages = [
-    "go/datas",
-    "go/types"
-  ]
-  revision = "22f70f585d00bb0c6c62e11580f8260e711d4cce"
-  version = "v7.4"
-
-[[projects]]
   name = "github.com/pkg/errors"
   packages = ["."]
   revision = "645ef00459ed84a119197bfb8d8205042c6df63d"
@@ -164,6 +153,12 @@
   packages = ["difflib"]
   revision = "792786c7400a136282c1664665ae0a8db921c6c2"
   version = "v1.0.0"
+
+[[projects]]
+  name = "github.com/stretchr/testify"
+  packages = ["assert"]
+  revision = "12b6f73e6084dad08a7c6e575284b177ecafbc71"
+  version = "v1.2.1"
 
 [[projects]]
   branch = "master"
@@ -199,6 +194,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "8640ba9f4dcc589ccac5e928feef58cfa5b0b39f80e4d98cf2539f7c90abdd54"
+  inputs-digest = "50942436f0a92381babfbfb70069934c998214a18ea0afc67cc2c1149c894dde"
   solver-name = "gps-cdcl"
   solver-version = 1

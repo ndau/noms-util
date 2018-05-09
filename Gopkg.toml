@@ -26,8 +26,9 @@
 
 
 [[constraint]]
-  name = "github.com/oneiro-ndev/noms"
-  version = "7.4.0"
+  name = "github.com/attic-labs/noms"
+  revision = "186e0939a5044b182bce9e60dea910bd6bcb5cd9"
+  source = "https://github.com/oneiro-ndev/noms.git"
 
 [[constraint]]
   name = "github.com/pkg/errors"

@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io/ioutil"
 
-	"github.com/oneiro-ndev/noms/go/datas"
-	nt "github.com/oneiro-ndev/noms/go/types"
+	"github.com/attic-labs/noms/go/datas"
+	nt "github.com/attic-labs/noms/go/types"
 	"github.com/pkg/errors"
 )
 

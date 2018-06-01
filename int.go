@@ -3,7 +3,7 @@ package backing
 import (
 	"encoding/binary"
 
-	"github.com/attic-labs/noms/go/datas"
+	"github.com/attic-labs/noms/go/marshal"
 	nt "github.com/attic-labs/noms/go/types"
 )
 
@@ -17,10 +17,12 @@ import (
 type Int int64
 
 // ToBlob converts this Int into a Blob datatype
-func (b Int) ToBlob(db datas.Database) nt.Blob {
+//
+// any datas.Database satisfies nt.ValueReadWriter
+func (i Int) ToBlob(vrw nt.ValueReadWriter) nt.Blob {
 	bytes := make([]byte, 8)
-	binary.BigEndian.PutUint64(bytes, uint64(b))
-	return Blob(db, bytes)
+	binary.BigEndian.PutUint64(bytes, uint64(i))
+	return Blob(vrw, bytes)
 }
 
 // IntFromBlob creates a Int from a blob, if possible
@@ -32,3 +34,20 @@ func IntFromBlob(blob nt.Blob) (Int, error) {
 
 	return Int(int64(binary.BigEndian.Uint64(bytes))), nil
 }
+
+// MarshalNoms satisfies the marshal.Marshaler interface
+func (i Int) MarshalNoms(vrw nt.ValueReadWriter) (val nt.Value, err error) {
+	return i.ToBlob(vrw), nil
+}
+
+// static assert that Int satisfies marshal.Marshaler
+var _ marshal.Marshaler = (*Int)(nil)
+
+// UnmarshalNoms satisfies the marshal.Unmarshaler interface
+func (i *Int) UnmarshalNoms(v nt.Value) (err error) {
+	*i, err = IntFromBlob(v.(nt.Blob))
+	return
+}
+
+// static assert that Int satisfies marshal.Marshaler
+var _ marshal.Unmarshaler = (*Int)(nil)

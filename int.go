@@ -14,8 +14,8 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/attic-labs/noms/go/marshal"
-	nt "github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/marshal"
+	nt "github.com/ndau/noms/go/types"
 )
 
 // Int is an integer which can serialize itself to noms.

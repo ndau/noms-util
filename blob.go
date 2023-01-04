@@ -13,7 +13,7 @@ import (
 	"bytes"
 	"io/ioutil"
 
-	nt "github.com/attic-labs/noms/go/types"
+	nt "github.com/ndau/noms/go/types"
 	"github.com/pkg/errors"
 )
 
